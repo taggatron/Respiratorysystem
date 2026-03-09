@@ -354,23 +354,23 @@ function initSimulator() {
 
   function createRibArc(yOffset, depth, width, thickness) {
     const points = [];
-    for (let i = 0; i <= 24; i += 1) {
-      const t = i / 24;
-      const ang = -Math.PI * 0.9 + t * Math.PI * 1.8;
+    for (let i = 0; i <= 36; i += 1) {
+      const t = i / 36;
+      const ang = t * Math.PI * 2;
       const x = Math.cos(ang) * width;
       const z = Math.sin(ang) * depth;
-      points.push(new THREE.Vector3(x, yOffset + Math.sin(t * Math.PI) * 0.08, z));
+      points.push(new THREE.Vector3(x, yOffset, z));
     }
 
-    const curve = new THREE.CatmullRomCurve3(points);
-    const geo = new THREE.TubeGeometry(curve, 50, thickness, 10, false);
+    const curve = new THREE.CatmullRomCurve3(points, true);
+    const geo = new THREE.TubeGeometry(curve, 72, thickness, 12, true);
     return new THREE.Mesh(geo, boneMat);
   }
 
   for (let i = 0; i < 9; i += 1) {
     const y = 1.66 - i * 0.38;
     const depth = 2.58 - i * 0.1;
-    const width = 3.58 - i * 0.14;
+    const width = 4 - i * 0.14;
     const rib = createRibArc(y, depth, width, 0.074);
     rib.rotation.x = 0.12;
     ribFrame.add(rib);
@@ -397,7 +397,7 @@ function initSimulator() {
   function createLung(side) {
     const lung = new THREE.Mesh(new THREE.SphereGeometry(1.55, 44, 32), lungMat);
     lung.position.set(side * 1.72, 2.08, 0);
-    lung.scale.set(0.86, 1.06, 0.7);
+    lung.scale.set(0.75, 1.06, 0.5);
     return lung;
   }
 
