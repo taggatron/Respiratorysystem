@@ -393,7 +393,7 @@ function initSimulator() {
 
   function createLung(side) {
     const lung = new THREE.Mesh(new THREE.SphereGeometry(1.55, 44, 32), lungMat);
-    lung.position.set(side * 1.72, 1.78, 0);
+    lung.position.set(side * 1.72, 2.08, 0);
     lung.scale.set(0.86, 1.06, 0.7);
     return lung;
   }
@@ -426,15 +426,15 @@ function initSimulator() {
   }
 
   const diaphragm = new THREE.Mesh(
-    new THREE.SphereGeometry(2.85, 34, 24, 0, Math.PI * 2, 0, Math.PI * 0.5),
+    new THREE.SphereGeometry(2.55, 34, 24, 0, Math.PI * 2, 0, Math.PI * 0.5),
     diaphragmMat
   );
-  const diaphragmBaseY = -0.8;
-  const diaphragmBaseScaleY = 0.62;
+  const diaphragmBaseY = -0.92;
+  const diaphragmBaseScaleY = 0.54;
   // Keep the dome facing upward so it projects into the thoracic cavity from below.
   diaphragm.rotation.x = 0;
   diaphragm.position.y = diaphragmBaseY;
-  diaphragm.scale.set(1.18, diaphragmBaseScaleY, 1.02);
+  diaphragm.scale.set(1.1, diaphragmBaseScaleY, 0.96);
   root.add(diaphragm);
 
   const floor = new THREE.Mesh(
