@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Thoracic anatomy reference figure">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8efe1" />
+      <stop offset="1" stop-color="#efe4d1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="900" height="520" fill="url(#bgGrad)" rx="18" />
+  <g transform="translate(50 35)">
+    <rect x="0" y="40" width="260" height="360" fill="#f3e6d2" stroke="#8f836f" stroke-width="4" rx="10" />
+    <rect x="30" y="70" width="200" height="130" fill="#db8f62" opacity="0.85" />
+    <rect x="30" y="230" width="200" height="130" fill="#c97049" opacity="0.85" />
+    <path d="M20,72 C65,40 195,40 240,72" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
+    <path d="M20,360 C65,390 195,390 240,360" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
+    <path d="M96,113 L176,146" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
+    <path d="M92,136 L172,169" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
+    <path d="M88,159 L168,192" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
+    <path d="M170,141 L176,146 L168,149" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M166,164 L172,169 L164,172" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M162,187 L168,192 L160,195" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M176,272 L96,303" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
+    <path d="M172,296 L92,327" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
+    <path d="M168,320 L88,351" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
+    <path d="M102,298 L96,303 L104,306" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M98,322 L92,327 L100,330" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M94,346 L88,351 L96,354" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="34" y="62" font-size="13" fill="#6b3f2a" font-weight="700">External fibers</text>
+    <text x="34" y="223" font-size="13" fill="#6b3f2a" font-weight="700">Internal fibers</text>
+  </g>
+  <g transform="translate(360 25)">
+    <ellipse cx="250" cy="220" rx="240" ry="210" fill="#f4e6cf" stroke="#93876f" stroke-width="5" />
+    <path d="M130,40 C30,120 26,300 150,380" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M180,24 C80,112 76,308 200,400" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M230,15 C128,106 125,312 246,412" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M275,12 C174,106 173,314 292,414" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M320,18 C228,112 228,312 334,406" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M360,28 C272,118 268,304 370,392" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M398,45 C327,127 324,289 406,367" fill="none" stroke="#d9ccb4" stroke-width="22" />
+    <path d="M168,126 C228,116 306,116 368,126" fill="none" stroke="#d26c45" stroke-width="24" />
+    <path d="M144,192 C210,181 316,181 378,192" fill="none" stroke="#d26c45" stroke-width="24" />
+    <path d="M136,258 C208,248 324,248 388,258" fill="none" stroke="#d26c45" stroke-width="24" />
+    <path d="M146,322 C220,312 330,312 380,322" fill="none" stroke="#d26c45" stroke-width="24" />
+    <path d="M250,58 L267,360" stroke="#c4b599" stroke-width="30" stroke-linecap="round" />
+  </g>
+</svg>
