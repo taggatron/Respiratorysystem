@@ -1,45 +1,259 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Thoracic anatomy reference figure">
-  <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f8efe1" />
-      <stop offset="1" stop-color="#efe4d1" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 520"
+   role="img"
+   aria-label="Thoracic anatomy reference figure"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="thoracic-anatomy.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview30"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.80983814"
+     inkscape:cx="467.37734"
+     inkscape:cy="209.91849"
+     inkscape:window-width="1512"
+     inkscape:window-height="949"
+     inkscape:window-x="1920"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg30" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="bgGrad"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0"
+         stop-color="#f8efe1"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#efe4d1"
+         id="stop2" />
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="900" height="520" fill="url(#bgGrad)" rx="18" />
-  <g transform="translate(50 35)">
-    <rect x="0" y="40" width="260" height="360" fill="#f3e6d2" stroke="#8f836f" stroke-width="4" rx="10" />
-    <rect x="30" y="70" width="200" height="130" fill="#db8f62" opacity="0.85" />
-    <rect x="30" y="230" width="200" height="130" fill="#c97049" opacity="0.85" />
-    <path d="M20,72 C65,40 195,40 240,72" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
-    <path d="M20,360 C65,390 195,390 240,360" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
-    <path d="M96,113 L176,146" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
-    <path d="M92,136 L172,169" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
-    <path d="M88,159 L168,192" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
-    <path d="M170,141 L176,146 L168,149" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M166,164 L172,169 L164,172" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M162,187 L168,192 L160,195" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M176,272 L96,303" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
-    <path d="M172,296 L92,327" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
-    <path d="M168,320 L88,351" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
-    <path d="M102,298 L96,303 L104,306" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M98,322 L92,327 L100,330" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M94,346 L88,351 L96,354" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="34" y="62" font-size="13" fill="#6b3f2a" font-weight="700">External fibers</text>
-    <text x="34" y="223" font-size="13" fill="#6b3f2a" font-weight="700">Internal fibers</text>
+  <rect
+     x="0"
+     y="0"
+     width="900"
+     height="520"
+     fill="url(#bgGrad)"
+     rx="18"
+     id="rect2" />
+  <g
+     transform="translate(50 35)"
+     id="g19">
+    <rect
+       x="0"
+       y="40"
+       width="260"
+       height="360"
+       fill="#f3e6d2"
+       stroke="#8f836f"
+       stroke-width="4"
+       rx="10"
+       id="rect3" />
+    <rect
+       x="30"
+       y="70"
+       width="200"
+       height="130"
+       fill="#db8f62"
+       opacity="0.85"
+       id="rect4" />
+    <rect
+       x="30"
+       y="230"
+       width="200"
+       height="130"
+       fill="#c97049"
+       opacity="0.85"
+       id="rect5" />
+    <path
+       d="M20,72 C65,40 195,40 240,72"
+       fill="none"
+       stroke="#d8c7ac"
+       stroke-width="26"
+       stroke-linecap="round"
+       id="path5" />
+    <path
+       d="M20,360 C65,390 195,390 240,360"
+       fill="none"
+       stroke="#d8c7ac"
+       stroke-width="26"
+       stroke-linecap="round"
+       id="path6" />
+    <path
+       d="M 45.372599,89.538522 176,146"
+       stroke="#b5593f"
+       stroke-width="10"
+       stroke-linecap="round"
+       id="path7"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 37.668155,112.53852 172,169 M 26.457794,135.27925 160.78963,191.74073"
+       stroke="#cc7450"
+       stroke-width="10"
+       stroke-linecap="round"
+       id="path8"
+       sodipodi:nodetypes="cccc" />
+    <path
+       d="M170,141 L176,146 L168,149"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path10" />
+    <path
+       d="M166,164 L172,169 L164,172"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path11" />
+    <path
+       d="M162,187 L168,192 L160,195"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path12" />
+    <path
+       d="M 220.45333,243.59926 41.668155,323.99185"
+       stroke="#b5593f"
+       stroke-width="10"
+       stroke-linecap="round"
+       id="path13"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 223.86222,267.59926 50.016302,340.58296 M 234.0363,287.3563 60.190375,360.34"
+       stroke="#cc7450"
+       stroke-width="10"
+       stroke-linecap="round"
+       id="path14"
+       sodipodi:nodetypes="cccc" />
+    <path
+       d="M102,298 L96,303 L104,306"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path16" />
+    <path
+       d="M98,322 L92,327 L100,330"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path17" />
+    <path
+       d="M94,346 L88,351 L96,354"
+       fill="none"
+       stroke="#8a3f2f"
+       stroke-width="4"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path18" />
   </g>
-  <g transform="translate(360 25)">
-    <ellipse cx="250" cy="220" rx="240" ry="210" fill="#f4e6cf" stroke="#93876f" stroke-width="5" />
-    <path d="M130,40 C30,120 26,300 150,380" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M180,24 C80,112 76,308 200,400" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M230,15 C128,106 125,312 246,412" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M275,12 C174,106 173,314 292,414" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M320,18 C228,112 228,312 334,406" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M360,28 C272,118 268,304 370,392" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M398,45 C327,127 324,289 406,367" fill="none" stroke="#d9ccb4" stroke-width="22" />
-    <path d="M168,126 C228,116 306,116 368,126" fill="none" stroke="#d26c45" stroke-width="24" />
-    <path d="M144,192 C210,181 316,181 378,192" fill="none" stroke="#d26c45" stroke-width="24" />
-    <path d="M136,258 C208,248 324,248 388,258" fill="none" stroke="#d26c45" stroke-width="24" />
-    <path d="M146,322 C220,312 330,312 380,322" fill="none" stroke="#d26c45" stroke-width="24" />
-    <path d="M250,58 L267,360" stroke="#c4b599" stroke-width="30" stroke-linecap="round" />
+  <g
+     transform="translate(360 25)"
+     id="g30">
+    <ellipse
+       cx="250"
+       cy="220"
+       rx="240"
+       ry="210"
+       fill="#f4e6cf"
+       stroke="#93876f"
+       stroke-width="5"
+       id="ellipse19" />
+    <path
+       d="m 418.39898,109.0835 c -80,-99.9999946 -260,-103.9999946 -340,20"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path19" />
+    <path
+       d="m 434.39898,159.0835 c -88,-99.999995 -284,-103.999995 -376,20"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path20" />
+    <path
+       d="m 443.39898,209.0835 c -91,-102 -297,-105 -397,16"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path21" />
+    <path
+       d="m 446.39898,254.0835 c -94,-101 -302,-102 -402,17"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path22" />
+    <path
+       d="m 440.39898,299.0835 c -94,-92 -294,-92 -388,14"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path23" />
+    <path
+       d="m 430.39898,339.0835 c -90,-88 -276,-92 -364,10"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path24" />
+    <path
+       d="m 413.39898,377.0835 c -82,-71 -244,-74 -322,8"
+       fill="none"
+       stroke="#d9ccb4"
+       stroke-width="22"
+       id="path25" />
+    <path
+       d="M 69.320009,178.97186 C 263.56666,36.846695 370.92296,138.1015 418.87037,166.62372 M 70.723939,229.94439 C 264.97059,87.819225 372.32689,189.07403 420.2743,217.59625 M 70.311367,269.54365 C 264.55802,127.41849 371.91432,228.67329 419.86173,257.19551 M 70.959539,316.60439 C 265.20619,174.47923 375.03212,284.37773 422.97953,312.89995 M 67.854847,131.51853 C 262.1015,-10.606632 369.4578,90.648173 417.40521,119.17039 M 81.806235,352.08217 C 198.25956,251.94071 385.87881,319.85551 433.82622,348.37773"
+       fill="none"
+       stroke="#d26c45"
+       stroke-width="24"
+       id="path28"
+       style="stroke-width:16;stroke-dasharray:none;stroke:#cf7f5a;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccccccc" />
   </g>
+  <path
+     d="m 130.52953,386.53703 c 107.29465,-31.71659 173.03158,-16.79766 249.39258,-7.40889"
+     fill="none"
+     stroke="#d26c45"
+     stroke-width="24"
+     id="path26"
+     sodipodi:nodetypes="cc"
+     style="stroke-width:42.1;stroke-linecap:round;stroke-dasharray:none"
+     inkscape:label="diaphragm"
+     transform="translate(360,25)" />
+  <path
+     d="M250,58 L267,360"
+     stroke="#c4b599"
+     stroke-width="30"
+     stroke-linecap="round"
+     id="path30"
+     transform="translate(360,25)"
+     inkscape:label="sternum" />
 </svg>
