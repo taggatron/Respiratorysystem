@@ -33,7 +33,7 @@
     <section class="tab-panel panel panel--activity is-active" data-panel="activity" aria-label="Thoracic anatomy drag and drop activity">
       <div class="activity-intro">
         <h2>Thoracic Anatomy Label Match</h2>
-        <p>Drag each structure label onto the matching marker on the thoracic diagram. This activity supports mouse and touch.</p>
+        <p>Drag each structure label onto the matching marker, focusing on intercostal muscles, thoracic ribs, sternum, and diaphragm.</p>
       </div>
 
       <div class="activity-layout">
@@ -52,12 +52,20 @@
               <rect x="30" y="230" width="200" height="130" fill="#c97049" opacity="0.85" />
               <path d="M20,72 C65,40 195,40 240,72" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
               <path d="M20,360 C65,390 195,390 240,360" fill="none" stroke="#d8c7ac" stroke-width="26" stroke-linecap="round" />
-              <path d="M110,120 L170,145" stroke="#a12f2f" stroke-width="10" stroke-linecap="round" />
-              <path d="M106,141 L168,164" stroke="#365ea9" stroke-width="10" stroke-linecap="round" />
-              <path d="M103,162 L165,184" stroke="#efcc57" stroke-width="10" stroke-linecap="round" />
-              <path d="M110,285 L170,311" stroke="#a12f2f" stroke-width="10" stroke-linecap="round" />
-              <path d="M106,306 L168,331" stroke="#365ea9" stroke-width="10" stroke-linecap="round" />
-              <path d="M103,327 L165,350" stroke="#efcc57" stroke-width="10" stroke-linecap="round" />
+              <path d="M96,113 L176,146" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
+              <path d="M92,136 L172,169" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
+              <path d="M88,159 L168,192" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
+              <path d="M170,141 L176,146 L168,149" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M166,164 L172,169 L164,172" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M162,187 L168,192 L160,195" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M176,272 L96,303" stroke="#b5593f" stroke-width="10" stroke-linecap="round" />
+              <path d="M172,296 L92,327" stroke="#cc7450" stroke-width="10" stroke-linecap="round" />
+              <path d="M168,320 L88,351" stroke="#df9465" stroke-width="10" stroke-linecap="round" />
+              <path d="M102,298 L96,303 L104,306" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M98,322 L92,327 L100,330" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M94,346 L88,351 L96,354" fill="none" stroke="#8a3f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <text x="34" y="62" font-size="13" fill="#6b3f2a" font-weight="700">External fibers</text>
+              <text x="34" y="223" font-size="13" fill="#6b3f2a" font-weight="700">Internal fibers</text>
             </g>
             <g transform="translate(360 25)">
               <ellipse cx="250" cy="220" rx="240" ry="210" fill="#f4e6cf" stroke="#93876f" stroke-width="5" />
@@ -68,10 +76,10 @@
               <path d="M320,18 C220,112 220,312 334,406" fill="none" stroke="#d9ccb4" stroke-width="22" />
               <path d="M360,28 C272,118 268,304 370,392" fill="none" stroke="#d9ccb4" stroke-width="22" />
               <path d="M398,45 C327,127 324,289 406,367" fill="none" stroke="#d9ccb4" stroke-width="22" />
-              <path d="M170,120 C180,86 340,84 360,124" fill="none" stroke="#d26c45" stroke-width="24" />
-              <path d="M145,180 C170,142 353,146 380,186" fill="none" stroke="#d26c45" stroke-width="24" />
-              <path d="M136,246 C170,208 356,211 389,250" fill="none" stroke="#d26c45" stroke-width="24" />
-              <path d="M146,307 C185,270 340,272 377,308" fill="none" stroke="#d26c45" stroke-width="24" />
+              <path d="M168,126 C228,116 306,116 368,126" fill="none" stroke="#d26c45" stroke-width="24" />
+              <path d="M144,192 C210,181 316,181 378,192" fill="none" stroke="#d26c45" stroke-width="24" />
+              <path d="M136,258 C208,248 324,248 388,258" fill="none" stroke="#d26c45" stroke-width="24" />
+              <path d="M146,322 C220,312 330,312 380,322" fill="none" stroke="#d26c45" stroke-width="24" />
               <path d="M250,58 L267,360" stroke="#c4b599" stroke-width="30" stroke-linecap="round" />
             </g>
           </svg>
@@ -79,23 +87,23 @@
           <div class="drop-target" data-accept="external-intercostal-muscle" style="left: 17%; top: 26%;">1</div>
           <div class="drop-target" data-accept="internal-intercostal-muscle" style="left: 17%; top: 58%;">2</div>
           <div class="drop-target" data-accept="innermost-intercostal-muscle" style="left: 22%; top: 71%;">3</div>
-          <div class="drop-target" data-accept="intercostal-artery" style="left: 26%; top: 33%;">4</div>
-          <div class="drop-target" data-accept="intercostal-vein" style="left: 27%; top: 38%;">5</div>
-          <div class="drop-target" data-accept="intercostal-nerve" style="left: 27%; top: 43%;">6</div>
-          <div class="drop-target" data-accept="external-intercostal-membrane" style="left: 72%; top: 70%;">7</div>
+          <div class="drop-target" data-accept="thoracic-ribs-upper" style="left: 70%; top: 30%;">4</div>
+          <div class="drop-target" data-accept="thoracic-ribs-lower" style="left: 72%; top: 55%;">5</div>
+          <div class="drop-target" data-accept="sternum" style="left: 62%; top: 44%;">6</div>
+          <div class="drop-target" data-accept="diaphragm" style="left: 67%; top: 78%;">7</div>
         </div>
 
         <aside class="activity-side">
           <h3>Labels</h3>
-          <p class="hint">Drag labels to markers 1-7.</p>
+          <p class="hint">Match markers 1-7 to muscle layers, ribs, sternum, and diaphragm.</p>
           <div class="token-bank" id="tokenBank">
             <button class="label-token" data-id="external-intercostal-muscle" type="button">External intercostal muscle</button>
             <button class="label-token" data-id="internal-intercostal-muscle" type="button">Internal intercostal muscle</button>
             <button class="label-token" data-id="innermost-intercostal-muscle" type="button">Innermost intercostal muscle</button>
-            <button class="label-token" data-id="intercostal-artery" type="button">Intercostal artery</button>
-            <button class="label-token" data-id="intercostal-vein" type="button">Intercostal vein</button>
-            <button class="label-token" data-id="intercostal-nerve" type="button">Intercostal nerve</button>
-            <button class="label-token" data-id="external-intercostal-membrane" type="button">External intercostal membrane</button>
+            <button class="label-token" data-id="thoracic-ribs-upper" type="button">Thoracic ribs (upper)</button>
+            <button class="label-token" data-id="thoracic-ribs-lower" type="button">Thoracic ribs (lower)</button>
+            <button class="label-token" data-id="sternum" type="button">Sternum</button>
+            <button class="label-token" data-id="diaphragm" type="button">Diaphragm</button>
           </div>
 
           <div class="activity-actions">
