@@ -317,7 +317,7 @@ function initSimulator() {
   });
 
   const diaphragmMat = new THREE.MeshStandardMaterial({
-    color: 0x7f8b87,
+    color: 0x5f6866,
     roughness: 0.72,
     metalness: 0.08
   });
@@ -426,12 +426,15 @@ function initSimulator() {
   }
 
   const diaphragm = new THREE.Mesh(
-    new THREE.SphereGeometry(2.65, 34, 24, 0, Math.PI * 2, 0, Math.PI * 0.5),
+    new THREE.SphereGeometry(2.85, 34, 24, 0, Math.PI * 2, 0, Math.PI * 0.5),
     diaphragmMat
   );
-  diaphragm.rotation.x = Math.PI;
-  diaphragm.position.y = 0.15;
-  diaphragm.scale.set(1.15, 0.45, 1);
+  const diaphragmBaseY = -0.8;
+  const diaphragmBaseScaleY = 0.62;
+  // Keep the dome facing upward so it projects into the thoracic cavity from below.
+  diaphragm.rotation.x = 0;
+  diaphragm.position.y = diaphragmBaseY;
+  diaphragm.scale.set(1.18, diaphragmBaseScaleY, 1.02);
   root.add(diaphragm);
 
   const floor = new THREE.Mesh(
@@ -541,8 +544,8 @@ function initSimulator() {
     ribFrame.rotation.x = 0.02 + amplitude * 0.1 * vent;
     sternum.position.z = 2.05 + amplitude * 0.08 * vent;
 
-    diaphragm.position.y = 0.15 - amplitude * 0.95 * vent;
-    diaphragm.scale.y = 0.45 + amplitude * 0.22 * (1 - vent);
+    diaphragm.position.y = diaphragmBaseY - amplitude * 0.58 * vent;
+    diaphragm.scale.y = diaphragmBaseScaleY + amplitude * 0.14 * (1 - vent);
 
     const pulse = 0.15 + vent * 0.7;
     alveoliCloud.children.forEach((dot, i) => {
