@@ -329,24 +329,27 @@ function initSimulator() {
   });
 
   const ribCage = new THREE.Mesh(
-    new THREE.SphereGeometry(3.35, 42, 32, 0, Math.PI * 2, 0.2, Math.PI * 0.82),
+    new THREE.SphereGeometry(4.05, 42, 32, 0, Math.PI * 2, 0.2, Math.PI * 0.82),
     chestMat
   );
-  ribCage.position.y = 1.95;
-  ribCage.scale.set(1, 1.08, 0.86);
+  const ribCageBaseScale = { x: 1.12, y: 1.24, z: 1 };
+  ribCage.position.y = 2.18;
+  ribCage.scale.set(ribCageBaseScale.x, ribCageBaseScale.y, ribCageBaseScale.z);
   root.add(ribCage);
 
+  const ribFrameBaseY = 2.18;
   const ribFrame = new THREE.Group();
-  ribFrame.position.set(0, 1.95, 0);
+  ribFrame.position.set(0, ribFrameBaseY, 0);
   root.add(ribFrame);
 
-  const spine = new THREE.Mesh(new THREE.CapsuleGeometry(0.17, 3.4, 6, 16), boneMat);
+  const spine = new THREE.Mesh(new THREE.CapsuleGeometry(0.21, 4.15, 6, 16), boneMat);
   spine.position.set(0, 0.2, -2.05);
   spine.rotation.x = Math.PI * 0.02;
   ribFrame.add(spine);
 
-  const sternum = new THREE.Mesh(new THREE.CapsuleGeometry(0.14, 2.1, 6, 16), boneMat);
-  sternum.position.set(0, 0.45, 2.05);
+  const sternum = new THREE.Mesh(new THREE.CapsuleGeometry(0.18, 2.75, 6, 16), boneMat);
+  const sternumBaseZ = 2.28;
+  sternum.position.set(0, 0.62, sternumBaseZ);
   ribFrame.add(sternum);
 
   function createRibArc(yOffset, depth, width, thickness) {
@@ -365,10 +368,10 @@ function initSimulator() {
   }
 
   for (let i = 0; i < 9; i += 1) {
-    const y = 1.4 - i * 0.34;
-    const depth = 2.15 - i * 0.08;
-    const width = 3.05 - i * 0.12;
-    const rib = createRibArc(y, depth, width, 0.06);
+    const y = 1.66 - i * 0.38;
+    const depth = 2.58 - i * 0.1;
+    const width = 3.58 - i * 0.14;
+    const rib = createRibArc(y, depth, width, 0.074);
     rib.rotation.x = 0.12;
     ribFrame.add(rib);
   }
@@ -538,11 +541,15 @@ function initSimulator() {
     trachea.scale.y = 1 + 0.08 * vent;
     trachea.position.y = 4.1 + 0.08 * vent;
 
-    ribCage.scale.set(1 + amplitude * 0.16 * vent, 1.08 + amplitude * 0.13 * vent, 0.86 + amplitude * 0.2 * vent);
-    ribFrame.position.y = 1.95 + ribLift;
+    ribCage.scale.set(
+      ribCageBaseScale.x + amplitude * 0.16 * vent,
+      ribCageBaseScale.y + amplitude * 0.13 * vent,
+      ribCageBaseScale.z + amplitude * 0.2 * vent
+    );
+    ribFrame.position.y = ribFrameBaseY + ribLift;
     ribFrame.scale.set(1 + ribOut, 1 + amplitude * 0.07 * vent, 1 + amplitude * 0.2 * vent);
     ribFrame.rotation.x = 0.02 + amplitude * 0.1 * vent;
-    sternum.position.z = 2.05 + amplitude * 0.08 * vent;
+    sternum.position.z = sternumBaseZ + amplitude * 0.08 * vent;
 
     diaphragm.position.y = diaphragmBaseY - amplitude * 0.58 * vent;
     diaphragm.scale.y = diaphragmBaseScaleY + amplitude * 0.14 * (1 - vent);
