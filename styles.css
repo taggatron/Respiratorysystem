@@ -1,0 +1,165 @@
+:root {
+  --bg: #f2efe7;
+  --panel: #fffaf0;
+  --ink: #1f1c15;
+  --muted: #5b5648;
+  --accent: #2e6f8f;
+  --accent-2: #ca4a34;
+  --line: #d9d3c7;
+  --shadow: 0 18px 30px rgba(43, 39, 31, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(140% 90% at 5% 0%, rgba(223, 200, 169, 0.6), rgba(242, 239, 231, 0) 60%),
+    radial-gradient(130% 100% at 90% 10%, rgba(154, 204, 220, 0.5), rgba(242, 239, 231, 0) 55%),
+    var(--bg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.app-shell {
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(255, 250, 240, 0.94), rgba(250, 244, 232, 0.82));
+  backdrop-filter: blur(2px);
+  box-shadow: var(--shadow);
+}
+
+.panel--header {
+  grid-column: 1 / -1;
+  padding: 1rem 1.25rem;
+}
+
+.panel--header h1 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  letter-spacing: 0.02em;
+}
+
+.panel--header p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.panel--controls {
+  padding: 1rem;
+  align-self: start;
+}
+
+.control-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.95rem;
+}
+
+.control-group label {
+  grid-column: 1 / -1;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.control-group input[type="range"]:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.control-group output {
+  min-width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.control-group--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+}
+
+.control-group--toggle label {
+  margin: 0;
+}
+
+.legend {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+
+.dot {
+  width: 0.62rem;
+  height: 0.62rem;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.42rem;
+}
+
+.dot--inhale {
+  background: var(--accent);
+}
+
+.dot--exhale {
+  background: var(--accent-2);
+}
+
+.panel--scene {
+  position: relative;
+  min-height: 68vh;
+  overflow: hidden;
+}
+
+#simCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 940px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto minmax(62vh, 1fr);
+  }
+
+  .panel--scene {
+    min-height: 62vh;
+  }
+}
