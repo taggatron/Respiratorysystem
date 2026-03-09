@@ -6,6 +6,8 @@
   --accent: #2e6f8f;
   --accent-2: #ca4a34;
   --line: #d9d3c7;
+  --success: #2f7d49;
+  --warn: #b94b3b;
   --shadow: 0 18px 30px rgba(43, 39, 31, 0.14);
 }
 
@@ -33,10 +35,8 @@ body {
 }
 
 .app-shell {
-  width: min(1200px, 100%);
+  width: min(1240px, 100%);
   display: grid;
-  grid-template-columns: 330px 1fr;
-  grid-template-rows: auto 1fr;
   gap: 1rem;
 }
 
@@ -49,19 +49,202 @@ body {
 }
 
 .panel--header {
-  grid-column: 1 / -1;
   padding: 1rem 1.25rem;
 }
 
 .panel--header h1 {
   margin: 0;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
   letter-spacing: 0.02em;
 }
 
 .panel--header p {
   margin: 0.35rem 0 0;
   color: var(--muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  border: 1px solid var(--line);
+  background: #f8f2e4;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.tab-btn:hover,
+.tab-btn:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+.tab-btn.is-active {
+  background: var(--accent);
+  color: #f9fcff;
+  border-color: transparent;
+}
+
+.tab-panel.is-hidden {
+  display: none;
+}
+
+.panel--activity {
+  padding: 1rem;
+}
+
+.activity-intro h2 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+}
+
+.activity-intro p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.activity-layout {
+  margin-top: 0.95rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1rem;
+}
+
+.activity-board {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eedecc;
+  touch-action: none;
+}
+
+.thoracic-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.drop-target {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  border: 2px dashed var(--accent);
+  background: rgba(255, 255, 255, 0.88);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--accent);
+  user-select: none;
+}
+
+.drop-target.has-token {
+  width: auto;
+  min-height: 2.3rem;
+  padding: 0.25rem 0.5rem;
+  border-style: solid;
+  border-color: var(--success);
+  color: #173b1f;
+  background: #edf9f0;
+  border-radius: 12px;
+}
+
+.drop-target.is-wrong {
+  border-color: var(--warn);
+  background: #fdeceb;
+  color: #6f2c26;
+}
+
+.activity-side {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem;
+  background: rgba(255, 250, 240, 0.86);
+}
+
+.activity-side h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hint {
+  margin: 0.35rem 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.token-bank {
+  display: grid;
+  gap: 0.45rem;
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.label-token {
+  border: 1px solid #c9bea9;
+  background: #f6eee0;
+  color: var(--ink);
+  border-radius: 10px;
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: grab;
+  touch-action: none;
+}
+
+.label-token:active {
+  cursor: grabbing;
+}
+
+.label-token.is-placed {
+  opacity: 0.55;
+}
+
+.activity-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.activity-actions button {
+  flex: 1;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  cursor: pointer;
+}
+
+.activity-actions button:last-child {
+  background: #7b7060;
+}
+
+.activity-status {
+  margin: 0.7rem 0 0;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.tab-panel--sim {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 1rem;
 }
 
 .panel--controls {
@@ -149,17 +332,65 @@ body {
   display: block;
 }
 
-@media (max-width: 940px) {
-  body {
-    padding: 0.75rem;
+.drag-ghost {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  border: 1px solid #8fa7b6;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  padding: 0.46rem 0.58rem;
+  font-size: 0.88rem;
+  box-shadow: 0 10px 22px rgba(28, 26, 20, 0.22);
+  max-width: min(220px, 70vw);
+}
+
+@media (max-width: 1020px) {
+  .activity-layout {
+    grid-template-columns: 1fr;
   }
 
-  .app-shell {
+  .tab-panel--sim {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto minmax(62vh, 1fr);
+    grid-template-rows: auto minmax(60vh, 1fr);
   }
 
   .panel--scene {
-    min-height: 62vh;
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0.65rem;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .drop-target {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.86rem;
+  }
+
+  .drop-target.has-token {
+    min-height: 2.1rem;
+    font-size: 0.8rem;
+    max-width: 38vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .token-bank {
+    max-height: 260px;
   }
 }
