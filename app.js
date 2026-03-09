@@ -55,6 +55,7 @@ function initAnatomyActivity() {
   const tokenToTarget = new Map();
 
   let dragState = null;
+  let dragHoverTarget = null;
 
   function scorePlacements() {
     let score = 0;
@@ -154,7 +155,44 @@ function initAnatomyActivity() {
 
   function getDropTargetFromPoint(clientX, clientY) {
     const elements = document.elementsFromPoint(clientX, clientY);
-    return elements.find((el) => el.classList && el.classList.contains("drop-target")) || null;
+    const directTarget = elements.find((el) => el.classList && el.classList.contains("drop-target"));
+    if (directTarget) {
+      return directTarget;
+    }
+
+    // Fallback to a forgiving radius around target centers to make dropping easier.
+    let best = null;
+    let bestDistance = Infinity;
+
+    targets.forEach((target) => {
+      const rect = target.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = clientX - cx;
+      const dy = clientY - cy;
+      const distance = Math.hypot(dx, dy);
+      const radius = Math.max(rect.width, rect.height) * 1.35;
+
+      if (distance <= radius && distance < bestDistance) {
+        best = target;
+        bestDistance = distance;
+      }
+    });
+
+    return best;
+  }
+
+  function setDragHoverTarget(nextTarget) {
+    if (dragHoverTarget === nextTarget) {
+      return;
+    }
+    if (dragHoverTarget) {
+      dragHoverTarget.classList.remove("is-over");
+    }
+    dragHoverTarget = nextTarget;
+    if (dragHoverTarget) {
+      dragHoverTarget.classList.add("is-over");
+    }
   }
 
   function endDrag(clientX, clientY) {
@@ -167,6 +205,8 @@ function initAnatomyActivity() {
       placeToken(dragState.tokenId, target);
     }
 
+    setDragHoverTarget(null);
+
     dragState.ghost.remove();
     dragState = null;
   }
@@ -178,6 +218,9 @@ function initAnatomyActivity() {
 
     dragState.ghost.style.left = `${clientX + 8}px`;
     dragState.ghost.style.top = `${clientY + 8}px`;
+
+    const target = getDropTargetFromPoint(clientX, clientY);
+    setDragHoverTarget(target);
   }
 
   tokens.forEach((token) => {
@@ -225,6 +268,7 @@ function initAnatomyActivity() {
         token.removeEventListener("pointermove", onMove);
         token.removeEventListener("pointerup", onUp);
         token.removeEventListener("pointercancel", onCancel);
+        setDragHoverTarget(null);
         if (dragState) {
           dragState.ghost.remove();
           dragState = null;

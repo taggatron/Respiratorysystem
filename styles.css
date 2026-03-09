@@ -136,8 +136,8 @@ body {
 
 .drop-target {
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  width: 2.35rem;
+  height: 2.35rem;
   border-radius: 999px;
   transform: translate(-50%, -50%);
   border: 2px dashed var(--accent);
@@ -147,6 +147,7 @@ body {
   font-weight: 700;
   color: var(--accent);
   user-select: none;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, border-color 140ms ease;
 }
 
 .drop-target.has-token {
@@ -164,6 +165,13 @@ body {
   border-color: var(--warn);
   background: #fdeceb;
   color: #6f2c26;
+}
+
+.drop-target.is-over {
+  transform: translate(-50%, -50%) scale(1.08);
+  border-color: var(--success);
+  background: #f0fbf3;
+  box-shadow: 0 0 0 6px rgba(47, 125, 73, 0.16);
 }
 
 .activity-side {
@@ -376,8 +384,8 @@ body {
   }
 
   .drop-target {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2.15rem;
+    height: 2.15rem;
     font-size: 0.86rem;
   }
 
